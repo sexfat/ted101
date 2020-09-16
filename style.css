@@ -17,9 +17,12 @@ section {
 
 
 .red {
-    background-color: rgb(253, 59, 59);
+    background-color: rgb(253, 59, 59); 
 }
 
 .blue {
     background-color: rgb(65, 132, 255);
+}
+.purple {
+    background-color: rgb(255, 73, 240);
 }
