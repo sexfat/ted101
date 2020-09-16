@@ -10,6 +10,7 @@ section {
 
 .box {
     width: 100px;
+    margin-top: 20px;
     margin-bottom: 10px;
     padding: 4px;
     text-align: center;
