@@ -57,6 +57,66 @@ TweenMax.to('.b4', 10, {
     }
 });
 
-TweenMax.staggerTo('.b5', 1, {
-    x: 200
-}, .4)
+// TweenMax.staggerTo('.b5', 1, {
+//     x: 200
+// })
+
+TweenMax.to('.b5', 1, {
+    x: 200,
+    // onComplete : alerts //callback
+})
+
+
+function alerts(){
+   alert('finish');
+}
+
+//第二個場景
+
+var t1 = new TimelineMax({
+    repeat : 2,
+    yoyo: true
+});
+
+//原本
+// TweenMax.to('.c1' , 1, {
+//     x: 100
+// });
+// TweenMax.to('.c2' , 1, {
+//     y: 100
+// })
+//
+
+t1.to('.c1' , 1, {
+    x: 100,
+    rotation : 360,
+    // repeat: 2
+}).to('.c2' , 1, {
+    y: 100
+}).to('.c3' , 1 , {
+    x: 300,
+    y: 400
+});
+
+t1.stop();
+
+document.getElementById('play').onclick = function() {
+   t1.play();
+}
+
+document.getElementById('pause').onclick = function() {
+    t1.pause();
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
