@@ -107,6 +107,9 @@ document.getElementById('play').onclick = function() {
 document.getElementById('pause').onclick = function() {
     t1.pause();
  }
+ document.getElementById('restart').onclick = function() {
+    t1.restart();
+ }
 
 
 
