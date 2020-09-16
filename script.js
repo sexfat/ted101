@@ -28,6 +28,8 @@ TweenMax.fromTo('.b3', 1, {
     x: 400
 });
 
+
+//
 TweenMax.to('.b4', 10, {
     bezier: {
         curviness: 1.25,
@@ -53,4 +55,8 @@ TweenMax.to('.b4', 10, {
             }
         ]
     }
-})
+});
+
+TweenMax.staggerTo('.b5', 1, {
+    x: 200
+}, .4)
