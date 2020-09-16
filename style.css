@@ -7,3 +7,13 @@ section {
     width: 100vw;
     height: 100vh;
 }
+
+.box {
+    width: 100px;
+    height: 30px;
+}
+
+
+.red {
+    background-color: rgb(253, 59, 59);
+}
