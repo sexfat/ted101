@@ -65,7 +65,6 @@ var scene03 = new ScrollMagic.Scene({
     // reverse: false
 }).setClassToggle('.section04','on').setTween(box).addIndicators().addTo(controller);
 
-
 var tl05 = new TimelineMax();
 
 tl05.to('.mg2' , 1 , {
