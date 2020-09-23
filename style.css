@@ -20,6 +20,7 @@ section {
    width: 230px;
    height: 50px;
    background-color: rgb(255, 31, 31);  
+   position: relative;
 }
 
 .mg {
@@ -54,8 +55,20 @@ section {
 .section04.on .box-s {
     transition:1s all ease-in-out;
     background-color: rgb(220, 0, 240);
+    animation-name:animation01 ;
+    animation-duration: 2s;
 }
 
+@keyframes animation01 {
+   from {
+       left: 0
+   }
+   to{
+       left : 500px
+   }
+
+
+}
 
 
 .red {
