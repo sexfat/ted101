@@ -69,11 +69,14 @@ var scene03 = new ScrollMagic.Scene({
 var tl05 = new TimelineMax();
 
 tl05.to('.mg2' , 1 , {
-    x: 100
+    x: 100,
+    scale: 2
 }).to('.mg3' , 1 , {
-    y: 100
+    y: 100,
+    scale: 2
 }).to('.mg4' , 1 , {
-    x: 200
+    x: 200,
+    scale: 2
 })
 
 var scene04 = new ScrollMagic.Scene({
