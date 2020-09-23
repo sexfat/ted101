@@ -15,6 +15,20 @@ section {
     padding: 4px;
     text-align: center;
 }
+
+.box-s {
+   width: 230px;
+   height: 50px;
+   background-color: rgb(255, 31, 31);  
+}
+
+.mg {
+     position: relative;
+     top: 350px;
+
+
+}
+
 .btn {
     width: 100px;
     height: 30px;
