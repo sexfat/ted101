@@ -13,4 +13,5 @@ var mv01 = TweenMax.fromTo('.mg', 1, {
 //觸發事件
 new ScrollMagic.Scene({
     triggerElement: '#point1',
+    triggerHook : 0
 }).setTween(mv01).addIndicators().addTo(controller);
