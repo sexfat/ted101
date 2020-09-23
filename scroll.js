@@ -2,9 +2,12 @@
 var controller = new ScrollMagic.Controller();
 
 //動畫
-var mv01 = TweenMax.to('.mg', 1, {
+var mv01 = TweenMax.fromTo('.mg', 1, {
+    x: -300,
+    opacity: 0 
+}, {
     x: 400,
-    y: 300
+    opacity: 1
 })
 
 //觸發事件
