@@ -30,8 +30,13 @@ t1.to('.mv01', 1, {
     x: 500
 })
 
+
 //場景二觸發事件
 var scene02 = new ScrollMagic.Scene({
     triggerElement: '#point2',
-    reverse: false
+    // duration : 600,
+    // offset : -100
+    // reverse: false
 }).setTween(t1).addIndicators().addTo(controller);
+
+

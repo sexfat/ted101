@@ -28,7 +28,8 @@ section {
 }
 
 .mg1 {
-
+     position: relative;
+     left: 40px;
      /* left: -300px; */
      margin-top: 10px;
 }
