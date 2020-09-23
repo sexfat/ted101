@@ -54,7 +54,6 @@ var scene02 = new ScrollMagic.Scene({
 }).setTween(t1).addIndicators().addTo(controller);
 
 //場景三觸發事件
-
 var box  = TweenMax.to('.box-x' , 1 , {
     x: 500
 }) 
@@ -65,3 +64,26 @@ var scene03 = new ScrollMagic.Scene({
     // offset : -100
     // reverse: false
 }).setClassToggle('.section04','on').setTween(box).addIndicators().addTo(controller);
+
+
+var tl05 = new TimelineMax();
+
+tl05.to('.mg2' , 1 , {
+    x: 100
+}).to('.mg3' , 1 , {
+    y: 100
+}).to('.mg4' , 1 , {
+    x: 200
+})
+
+var scene04 = new ScrollMagic.Scene({
+    triggerElement: '#point4',
+     triggerHook :0,
+     duration : '300%'
+}).setPin('.section05').setTween(tl05).addIndicators().addTo(controller);
+
+
+
+
+
+
