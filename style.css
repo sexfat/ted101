@@ -16,11 +16,12 @@ section {
     text-align: center;
 }
 
-.box-s {
+.box-s , .box-v  , .box-x{
    width: 230px;
    height: 50px;
    background-color: rgb(255, 31, 31);  
    position: relative;
+   color: #fff
 }
 
 .mg {
@@ -66,9 +67,27 @@ section {
    to{
        left : 500px
    }
+}
+
+.section04.on .box-v {
+    transition:1s all ease-in-out;
+    background-color: rgb(255, 230, 0);
+    animation-name:animation02;
+    animation-duration: 1s;
+}
+
+@keyframes animation02 {
+   from {
+       top: 0
+   }
+   to{
+       top : 500px
+   }
 
 
 }
+
+
 
 
 .red {

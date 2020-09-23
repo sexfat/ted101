@@ -18,16 +18,30 @@ var scene01 = new ScrollMagic.Scene({
 
 
 //動畫
+// var t1 = new TimelineMax();
+
+// t1.to('.mv01', 1, {
+//     x: 100,
+    
+// }).to('.mv01', 1, {
+//     y: 200,
+//     className:"+=aa"
+// }).to('.mv01', 1, {
+//     x: 500,
+//     className:"-=aa"
+// }).to('.mv01', 1, {
+//     y: 800,
+//     className:"+=bb"
+// })
+
+
+
 var t1 = new TimelineMax();
 
-t1.to('.mv01', 1, {
-    x: 100
-}).to('.mv02', 1, {
-    x: 200
-}).to('.mv03', 1, {
-    x: 300
-}).to('.mv04', 1, {
-    x: 500
+t1.to(['.mv01' , '.mv03'], 1, {
+    x: 100,
+}).to(['.mv02' , '.mv04'], 1, {
+    y: 200,
 })
 
 
@@ -40,9 +54,14 @@ var scene02 = new ScrollMagic.Scene({
 }).setTween(t1).addIndicators().addTo(controller);
 
 //場景三觸發事件
+
+var box  = TweenMax.to('.box-x' , 1 , {
+    x: 500
+}) 
+
 var scene03 = new ScrollMagic.Scene({
     triggerElement: '#point3',
     // duration : 600,
     // offset : -100
     // reverse: false
-}).setClassToggle('.section04','on').addIndicators().addTo(controller);
+}).setClassToggle('.section04','on').setTween(box).addIndicators().addTo(controller);
