@@ -40,3 +40,9 @@ var scene02 = new ScrollMagic.Scene({
 }).setTween(t1).addIndicators().addTo(controller);
 
 
+var scene03 = new ScrollMagic.Scene({
+    triggerElement: '#point3',
+    // duration : 600,
+    // offset : -100
+    // reverse: false
+}).setClassToggle('.section04' ,'on').addIndicators().addTo(controller);
