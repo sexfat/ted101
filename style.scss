@@ -17,8 +17,22 @@ body {
     }
 }
 
+
+// function name(){
+// }
+
+//不帶值
+//宣告 
+@mixin marginAuto(){
+    margin: 0 auto;
+    background-color: #333;
+ };
+
 // nesting 巢狀寫法
 .wrapper{
+    width: 1200px;
+    //呼叫
+    @include marginAuto();
     h1 {
         font-size: 30px;
         color : map-get($bg-color , 'red' );
@@ -46,3 +60,4 @@ body {
        }
     }
 }
+

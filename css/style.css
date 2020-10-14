@@ -14,6 +14,12 @@ body {
   color: #ff5e00;
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #333;
+}
+
 .wrapper h1 {
   font-size: 30px;
   color: #f20;
