@@ -10,11 +10,9 @@ sans-serif; // 字串
 $null : null; //null
 $true : true; //true
 $aa : false;
-$bg-color:(
-  'blues': #001aff ,
-  'red' : #f20,
-  'green' : #88ff00
-); //map
+$bg-color:('blues': #001aff,
+    'red' : #f20,
+    'green' : #88ff00); //map
 
 body {
     font-family: $font_family;
@@ -22,9 +20,39 @@ body {
     padding: $a * 1;
     background-color: $red;
     font-size: $null;
-    color: map-get($bg-color, 'blues' );
-    
-    @if $aa == true {
+    color: map-get($bg-color, 'blues');
+
+    @if $aa==true {
         border-radius: 10px;
+    }
+}
+
+
+.wrapper{
+    h1 {
+        font-size: 30px;
+        color : map-get($bg-color , 'red' );
+        .title {
+          font-size: 20px;  
+        }
+    }
+    span {
+      font-size: 10px;
+      color : #999;  
+    }
+    .btn {
+       width: 100px;
+       height: 20px;
+       padding: 10px;
+       text-align: center;
+       transition: .2s all ease-in-out;
+       background-color: rgb(217, 255, 4);
+       cursor: pointer;
+       &:hover {
+        background-color: rgb(143, 196, 0); // 偽元素   
+       }
+       &::before {
+           content: ''; // 偽元素
+       }
     }
 }

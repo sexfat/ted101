@@ -7,4 +7,36 @@ body {
   background-color: #00ff15;
   color: #001aff;
 }
+
+.wrapper h1 {
+  font-size: 30px;
+  color: #f20;
+}
+
+.wrapper h1 .title {
+  font-size: 20px;
+}
+
+.wrapper span {
+  font-size: 10px;
+  color: #999;
+}
+
+.wrapper .btn {
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  transition: .2s all ease-in-out;
+  background-color: #d9ff04;
+  cursor: pointer;
+}
+
+.wrapper .btn:hover {
+  background-color: #8fc400;
+}
+
+.wrapper .btn::before {
+  content: '';
+}
 /*# sourceMappingURL=style.css.map */
