@@ -1,7 +1,10 @@
 /*註解*/
 // sass 變數
 @import 'sass/var';
+@import 'sass/mixins';
+//layout
 @import 'sass/header';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 
 body {
@@ -22,14 +25,7 @@ body {
 
 //  }  
 
-//不帶值
-//宣告 
-@mixin marginAuto($bgc , $fontColor:red){
-    margin: 0 auto;
-    background-color: $bgc;
-    padding: 10px;
-    color: $fontColor;
- };
+
 
 
 
@@ -67,20 +63,8 @@ body {
     }
 }
 
-//按鈕
-@mixin btns($w , $bgc , $borderColor , $bdr:null){
-    padding:10px $w;
-    background-color: $bgc;
-    cursor: pointer;
-    border: 1px solid $borderColor;
-    text-align: center;
-    border-radius: $bdr;
-    &:hover {
-        background-color: darken($bgc ,5);
-    }
- }
 
-
+//呼叫
 
 .btn-wide {
     width: 120px;

@@ -1,0 +1,22 @@
+//不帶值
+//宣告 
+@mixin marginAuto($bgc , $fontColor:red){
+    margin: 0 auto;
+    background-color: $bgc;
+    padding: 10px;
+    color: $fontColor;
+ };
+
+
+ //按鈕
+@mixin btns($w , $bgc , $borderColor , $bdr:null){
+    padding:10px $w;
+    background-color: $bgc;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    text-align: center;
+    border-radius: $bdr;
+    &:hover {
+        background-color: darken($bgc ,5);
+    }
+ }
