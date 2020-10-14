@@ -4,11 +4,20 @@
 $a : 10px; //數字
 $red : #f20; //顏色
 $margin : 10px 20px 20px 10px; //list
-
+$font_family : Helvetica,
+Arial,
+sans-serif; // 字串
+$null : null; //null
+$true : true; //true
+$aa : false;
 
 body {
-
+    font-family: $font_family;
     margin: $margin;
     padding: $a * 10;
     background-color: $red;
+    font-size: $null;
+    @if $aa == true {
+        border-radius: 10px;
+    }
 }
