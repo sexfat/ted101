@@ -1,0 +1,14 @@
+/*註解*/
+// sass 變數
+
+$a : 10px; //數字
+$red : #f20; //顏色
+$margin : 10px 20px 20px 10px; //list
+
+
+body {
+
+    margin: $margin;
+    padding: $a * 10;
+    background-color: $red;
+}
