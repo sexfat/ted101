@@ -7,6 +7,24 @@ header {
 }
 
 /*end*/
+@media all and (min-width: 1200px) {
+  .box {
+    width: 1200px;
+  }
+}
+
+@media all and (min-width: 996px) {
+  .box {
+    width: 800px;
+  }
+}
+
+@media all and (max-width: 721px) {
+  .box {
+    width: 600px;
+  }
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 10px 0px 0px 10px;
@@ -161,5 +179,17 @@ h5 {
 
 .container h1 {
   font-size: 20px;
+}
+
+@media all and (min-width: 996px) {
+  .box {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 721px) {
+  .box {
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

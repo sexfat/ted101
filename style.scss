@@ -7,6 +7,9 @@
 /*bootstrap end*/
 //layout
 @import 'sass/header';
+@import 'sass/main/desktop';
+@import 'sass/main/medium';
+@import 'sass/main/small';
 
 
 
@@ -163,8 +166,7 @@ $width : 30;
     }
 }
 
-
-
+// layout
 @mixin layout($width){
   @if $width == 100 {
      .container-full {
@@ -184,5 +186,28 @@ $width : 30;
 @include layout(1366){
     h1 {
        font-size: 20px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@include rwd(medium){
+   .box {
+       width: 300px;
+   }
+}
+
+
+@include rwd(small){
+    .box {
+        width: 100px;
+
     }
 }
