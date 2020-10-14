@@ -17,10 +17,16 @@ body {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
-  background-color: #333;
+  background-color: #f0ed53;
+  padding: 10px;
+  color: red;
 }
 
 .wrapper h1 {
+  margin: 0 auto;
+  background-color: #333;
+  padding: 10px;
+  color: #07ffac;
   font-size: 30px;
   color: #f20;
 }
@@ -50,5 +56,31 @@ body {
 
 .wrapper .btn::before {
   content: '';
+}
+
+.btn-wide {
+  width: 120px;
+  padding: 10px 60px;
+  background-color: #0c72f7;
+  cursor: pointer;
+  border: 1px solid #00e4a0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn-wide:hover {
+  background-color: #0766e2;
+}
+
+.btn-aa {
+  padding: 10px 30px;
+  background-color: #004700;
+  cursor: pointer;
+  border: 1px solid #e00000;
+  text-align: center;
+}
+
+.btn-aa:hover {
+  background-color: #002e00;
 }
 /*# sourceMappingURL=style.css.map */

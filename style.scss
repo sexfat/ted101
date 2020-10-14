@@ -18,22 +18,28 @@ body {
 }
 
 
-// function name(){
-// }
+//  function name(){
+
+//  }  
 
 //不帶值
 //宣告 
-@mixin marginAuto(){
+@mixin marginAuto($bgc , $fontColor:red){
     margin: 0 auto;
-    background-color: #333;
+    background-color: $bgc;
+    padding: 10px;
+    color: $fontColor;
  };
+
+
 
 // nesting 巢狀寫法
 .wrapper{
     width: 1200px;
     //呼叫
-    @include marginAuto();
+    @include marginAuto(#f0ed53);
     h1 {
+        @include marginAuto(#333 , #07ffac );
         font-size: 30px;
         color : map-get($bg-color , 'red' );
         .title {
@@ -61,3 +67,25 @@ body {
     }
 }
 
+//按鈕
+@mixin btns($w , $bgc , $borderColor , $bdr:null){
+    padding:10px $w;
+    background-color: $bgc;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    text-align: center;
+    border-radius: $bdr;
+    &:hover {
+        background-color: darken($bgc ,5);
+    }
+ }
+
+
+
+.btn-wide {
+    width: 120px;
+    @include btns(60px,rgb(12, 114, 247) ,#00e4a0 ,10px)
+} 
+.btn-aa {
+     @include btns(30px, rgb(0, 71, 0) , rgb(224, 0, 0));
+}
