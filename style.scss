@@ -10,6 +10,11 @@ sans-serif; // 字串
 $null : null; //null
 $true : true; //true
 $aa : false;
+$bg-color:(
+  'blues': #001aff ,
+  'red' : #f20,
+  'green' : #88ff00
+); //map
 
 body {
     font-family: $font_family;
@@ -17,6 +22,8 @@ body {
     padding: $a * 10;
     background-color: $red;
     font-size: $null;
+    color: map-get($bg-color, 'red' );
+    
     @if $aa == true {
         border-radius: 10px;
     }
