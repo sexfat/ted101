@@ -1,5 +1,10 @@
 //不帶值
 //宣告 
+
+@mixin box-sizing(){
+    box-sizing: border-box;
+}
+
 @mixin marginAuto($bgc , $fontColor:red){
     margin: 0 auto;
     background-color: $bgc;
@@ -36,6 +41,7 @@
         position: relative;
         left: $val + px;
         background-image: url(img/#{$imgUrl}.jpg);
+        @content
     }
   }
 

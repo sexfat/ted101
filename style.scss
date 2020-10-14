@@ -83,13 +83,22 @@ body {
 
   
   
-  @include push_left('.push', 200 , aa);
+  @include push_left('.push', 200 , aa){
+      border: 1px solid #00e4a0;
+      padding-left: 10px;
+      @include box-sizing();
+  }
 
 
+  @include push_left('.pull', 100 , bb){
+     margin-top: 100px;
+     @include box-sizing();
+}
 
-@include btnAll('.btn-wide' , 250px, 10px,rgb(157, 255, 0) );
+
+@include btnAll('.btn-wide' , 250px, 10px,rgb(157, 255, 0));
 @include btnAll('.btn-small' , 150px, 8px,rgb(21, 255, 0) );
-@include btnAll('.btn-medium' , 200px, 9px,rgb(0, 238, 255) );
+@include btnAll('.btn-medium' , 200px, 9px,rgb(0, 238, 255));
 
 
 
