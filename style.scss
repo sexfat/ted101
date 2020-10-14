@@ -2,9 +2,12 @@
 // sass 變數
 @import 'sass/var';
 @import 'sass/mixins';
+
+// @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+/*bootstrap end*/
 //layout
 @import 'sass/header';
-@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
 
 
 body {
@@ -73,3 +76,23 @@ body {
 .btn-aa {
      @include btns(30px, rgb(0, 71, 0) , rgb(224, 0, 0));
 }
+
+
+// 數值轉字串 #{}
+
+
+  
+  
+  @include push_left('.push', 200 , aa);
+
+
+
+@include btnAll('.btn-wide' , 250px, 10px,rgb(157, 255, 0) );
+@include btnAll('.btn-small' , 150px, 8px,rgb(21, 255, 0) );
+@include btnAll('.btn-medium' , 200px, 9px,rgb(0, 238, 255) );
+
+
+
+
+
+

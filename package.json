@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sexfat/ted101#readme",
   "dependencies": {
     "bootstrap-sass": "^3.4.1",
+    "gsap": "^3.5.1",
     "jquery": "^3.5.1"
   }
 }

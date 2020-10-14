@@ -9,6 +9,7 @@
 
 
  //按鈕
+ 
 @mixin btns($w , $bgc , $borderColor , $bdr:null){
     padding:10px $w;
     background-color: $bgc;
@@ -20,3 +21,25 @@
         background-color: darken($bgc ,5);
     }
  }
+
+
+ @mixin btnAll($name , $w , $padding ,$bgc){
+    #{$name}{
+      width:$w ;
+      padding:$padding ;
+      background-color: $bgc;
+    }
+ }
+
+ @mixin push_left($title , $val , $imgUrl){
+    #{$title}-left_#{$val}{
+        position: relative;
+        left: $val + px;
+        background-image: url(img/#{$imgUrl}.jpg);
+    }
+  }
+
+
+
+
+
