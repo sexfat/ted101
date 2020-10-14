@@ -149,4 +149,17 @@ h4 {
 h5 {
   font-size: 40px;
 }
+
+.box2 {
+  width: 30px;
+}
+
+.container {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-size: 20px;
+}
 /*# sourceMappingURL=style.css.map */

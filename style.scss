@@ -147,3 +147,42 @@ $b : 20;
 }
 
 @include fontSize(20px);
+
+
+
+$width : 30;
+
+
+.box2 {
+    @if ($width < 100) {
+        width: $width + px;
+    }@else if  ($width == 110) {
+        width: $width * 2 + px;
+    }@else {
+        width: ($width / 2) + px ;
+    }
+}
+
+
+
+@mixin layout($width){
+  @if $width == 100 {
+     .container-full {
+        width: 100%;
+        display: block;
+        @content;
+     }
+    }@else{
+       .container{
+        width: $width + px;
+        margin: 0 auto; 
+        @content;
+       }
+     }
+  }
+
+@include layout(1366){
+    h1 {
+       font-size: 20px; 
+    }
+}
