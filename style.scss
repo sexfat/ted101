@@ -101,7 +101,18 @@ body {
 @include btnAll('.btn-medium' , 200px, 9px,rgb(0, 238, 255));
 
 
+$a : 100;
+$b : 20;
 
+.box {
+    width:  10 + 10px;
+    height:  10px - 11;
+    padding:  10 * 10 + px;
+    font : ($a / $b) + px; 
+    margin: floor(100 / 3) + px; //無條件捨去
+    font-size: ceil(100 / 3) + px;//無條件進位
+    max-width: round(100 / 6) + px; //四捨五入
+}
 
 
 

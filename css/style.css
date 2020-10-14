@@ -119,4 +119,14 @@ body {
   padding: 9px;
   background-color: #00eeff;
 }
+
+.box {
+  width: 20px;
+  height: -1px;
+  padding: 100px;
+  font: 5px;
+  margin: 33px;
+  font-size: 34px;
+  max-width: 17px;
+}
 /*# sourceMappingURL=style.css.map */
