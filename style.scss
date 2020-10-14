@@ -1,7 +1,7 @@
 /*註解*/
 // sass 變數
 @import 'sass/var';
-
+@import 'sass/header';
 
 
 body {
@@ -17,7 +17,7 @@ body {
     }
 }
 
-
+// nesting 巢狀寫法
 .wrapper{
     h1 {
         font-size: 30px;

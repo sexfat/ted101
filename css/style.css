@@ -1,11 +1,17 @@
 @charset "UTF-8";
 /*註解*/
+/*header*/
+header {
+  background-color: #fff;
+}
+
+/*end*/
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 10px 0px 0px 10px;
   padding: 10px;
   background-color: #00ff15;
-  color: #001aff;
+  color: #ff5e00;
 }
 
 .wrapper h1 {
