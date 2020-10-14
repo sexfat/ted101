@@ -2,8 +2,8 @@
 // sass 變數
 
 $a : 10px; //數字
-$red : #f20; //顏色
-$margin : 10px 20px 20px 10px; //list
+$red : rgb(0, 255, 21); //顏色
+$margin : 10px 0px 0px 10px; //list
 $font_family : Helvetica,
 Arial,
 sans-serif; // 字串
@@ -19,10 +19,10 @@ $bg-color:(
 body {
     font-family: $font_family;
     margin: $margin;
-    padding: $a * 10;
+    padding: $a * 1;
     background-color: $red;
     font-size: $null;
-    color: map-get($bg-color, 'red' );
+    color: map-get($bg-color, 'blues' );
     
     @if $aa == true {
         border-radius: 10px;
