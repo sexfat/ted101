@@ -33,36 +33,42 @@ body {
 
 
 // nesting 巢狀寫法
-.wrapper{
+.wrapper {
     width: 1200px;
     //呼叫
     @include marginAuto(#f0ed53);
+
     h1 {
-        @include marginAuto(#333 , #07ffac );
+        @include marginAuto(#333, #07ffac);
         font-size: 30px;
-        color : map-get($bg-color , 'red' );
+        color: map-get($bg-color, 'red');
+
         .title {
-          font-size: 20px;  
+            font-size: 20px;
         }
     }
+
     span {
-      font-size: 10px;
-      color : #999;  
+        font-size: 10px;
+        color: #999;
     }
+
     .btn {
-       width: 100px;
-       height: 20px;
-       padding: 10px;
-       text-align: center;
-       transition: .2s all ease-in-out;
-       background-color: rgb(217, 255, 4);
-       cursor: pointer;
-       &:hover {
-        background-color: rgb(143, 196, 0); // 偽元素   
-       }
-       &::before {
-           content: ''; // 偽元素
-       }
+        width: 100px;
+        height: 20px;
+        padding: 10px;
+        text-align: center;
+        transition: .2s all ease-in-out;
+        background-color: rgb(217, 255, 4);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(143, 196, 0); // 偽元素   
+        }
+
+        &::before {
+            content: ''; // 偽元素
+        }
     }
 }
 
@@ -71,48 +77,73 @@ body {
 
 .btn-wide {
     width: 120px;
-    @include btns(60px,rgb(12, 114, 247) ,#00e4a0 ,10px)
-} 
+    @include btns(60px, rgb(12, 114, 247), #00e4a0, 10px)
+}
+
 .btn-aa {
-     @include btns(30px, rgb(0, 71, 0) , rgb(224, 0, 0));
+    @include btns(30px, rgb(0, 71, 0), rgb(224, 0, 0));
 }
 
 
 // 數值轉字串 #{}
 
 
-  
-  
-  @include push_left('.push', 200 , aa){
-      border: 1px solid #00e4a0;
-      padding-left: 10px;
-      @include box-sizing();
-  }
 
 
-  @include push_left('.pull', 100 , bb){
-     margin-top: 100px;
-     @include box-sizing();
+@include push_left('.push', 200, aa) {
+    border: 1px solid #00e4a0;
+    padding-left: 10px;
+    @include box-sizing();
 }
 
 
-@include btnAll('.btn-wide' , 250px, 10px,rgb(157, 255, 0));
-@include btnAll('.btn-small' , 150px, 8px,rgb(21, 255, 0) );
-@include btnAll('.btn-medium' , 200px, 9px,rgb(0, 238, 255));
+@include push_left('.pull', 100, bb) {
+    margin-top: 100px;
+    @include box-sizing();
+}
+
+
+@include btnAll('.btn-wide', 250px, 10px, rgb(157, 255, 0));
+@include btnAll('.btn-small', 150px, 8px, rgb(21, 255, 0));
+@include btnAll('.btn-medium', 200px, 9px, rgb(0, 238, 255));
 
 
 $a : 100;
 $b : 20;
 
 .box {
-    width:  10 + 10px;
-    height:  10px - 11;
-    padding:  10 * 10 + px;
-    font : ($a / $b) + px; 
+    width: 10 + 10px;
+    height: 10px - 11;
+    padding: 10 * 10 + px;
+    font: ($a / $b) + px;
     margin: floor(100 / 3) + px; //無條件捨去
-    font-size: ceil(100 / 3) + px;//無條件進位
+    font-size: ceil(100 / 3) + px; //無條件進位
     max-width: round(100 / 6) + px; //四捨五入
 }
 
 
+// $fontSize-basic : 12px;
 
+@mixin fontSize($fontSize-basic) {
+    h1 {
+        font-size: ceil($fontSize-basic * 5);
+    }
+
+    h2 {
+        font-size: ceil($fontSize-basic * 4.5);
+    }
+
+    h3 {
+        font-size: ceil($fontSize-basic * 4);
+    }
+
+    h4 {
+        font-size: ceil($fontSize-basic * 3.8);
+    }
+
+    h5 {
+        font-size: ceil($fontSize-basic * 2);
+    }
+}
+
+@include fontSize(20px);

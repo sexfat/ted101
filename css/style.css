@@ -129,4 +129,24 @@ body {
   font-size: 34px;
   max-width: 17px;
 }
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 90px;
+}
+
+h3 {
+  font-size: 80px;
+}
+
+h4 {
+  font-size: 76px;
+}
+
+h5 {
+  font-size: 40px;
+}
 /*# sourceMappingURL=style.css.map */
