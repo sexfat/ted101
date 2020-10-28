@@ -3,7 +3,7 @@
 @import 'sass/var';
 @import 'sass/mixins';
 
-// @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 /*bootstrap end*/
 //layout
 @import 'sass/header';
@@ -299,19 +299,19 @@ $list: a1 a2 a3 b1 b2; //list
 }
 
 //map 型別
-$font-title : (
-    'h1' : 30px, // key : value
+$font-title : ('h1' : 30px, // key : value
     'h2' : 20px,
     'h3' : 18px,
     'h4' : 15px,
-    'h5' : 12px
-    ); //map
+    'h5' : 12px); //map
 
-@each $key, $val in $font-title {
+@each $key,
+$val in $font-title {
     #{$key} {
         font-size: $val;
     }
 }
+
 // map 取值
 
 
@@ -324,31 +324,82 @@ $font-title : (
 }
 
 //grid 組件
-@mixin grid($num , $res:null){
+@mixin grid($num, $res:null) {
     @for $i from 1 through $num {
         .col-#{$res}#{$i} {
             width: ($i / $num) * 100%;
             display: inline-block;
-           
+
         }
     }
 }
 
+
+
 @include grid(16);
 
 @include rwd(desktop) {
-    @include grid(16 , xl-);
+    @include grid(16, xl-);
 }
 
 @include rwd(medium) {
-    @include grid(16 , md-);
+    @include grid(16, md-);
 }
 
 @include rwd(small) {
-    @include grid(16 , sm-);
+    @include grid(16, sm-);
 }
 
 
 
+$brand-primary: darken(#428bca, 6.5%) ; // #337ab7
+$brand-success: #0cd10c ;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
 
 
+
+$color : ('primary' : #428bca,
+    'success' : #5cb85c,
+    'info' : #5bc0de,
+    'warning' : #f0ad4e,
+    'danger' : #d9534f,
+    'stop' : #333,
+    'status' : #1eff96
+    );
+
+
+
+$color-A : ('primary-A' : #85fa00,
+    'success-A' : #2331f8,
+    'info-A' : #f5dc00,
+    'warning-A' : #f0ad4e,
+    'danger-A' : #f10800,
+    'stop-A' : #f700ff,
+    'status-A' : #1eff96
+    );    
+
+
+
+
+
+@mixin color($color, $colorStyle:color) {
+
+    @each $key, $val in $color {
+        .color-#{$key} {
+            @if $colorStyle == color {
+                color: $val
+            }
+
+            @else {
+                background-color: $val;
+            }
+        }
+    }
+}
+
+@include color($color , color);
+
+
+@include color($color-A , bgcolor);

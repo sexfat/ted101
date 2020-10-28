@@ -1151,4 +1151,60 @@ h5 {
     display: inline-block;
   }
 }
+
+.color-primary {
+  color: #428bca;
+}
+
+.color-success {
+  color: #5cb85c;
+}
+
+.color-info {
+  color: #5bc0de;
+}
+
+.color-warning {
+  color: #f0ad4e;
+}
+
+.color-danger {
+  color: #d9534f;
+}
+
+.color-stop {
+  color: #333;
+}
+
+.color-status {
+  color: #1eff96;
+}
+
+.color-primary-A {
+  background-color: #85fa00;
+}
+
+.color-success-A {
+  background-color: #2331f8;
+}
+
+.color-info-A {
+  background-color: #f5dc00;
+}
+
+.color-warning-A {
+  background-color: #f0ad4e;
+}
+
+.color-danger-A {
+  background-color: #f10800;
+}
+
+.color-stop-A {
+  background-color: #f700ff;
+}
+
+.color-status-A {
+  background-color: #1eff96;
+}
 /*# sourceMappingURL=style.css.map */
