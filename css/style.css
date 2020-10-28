@@ -838,35 +838,88 @@ h5 {
   background-image: url(./images/d01.jpg);
   background-size: cover;
   display: block;
+  width: 600px;
+  height: 400px;
 }
 
 .img-d02 {
   background-image: url(./images/d02.jpg);
   background-size: cover;
   display: block;
+  width: 600px;
+  height: 400px;
 }
 
 .img-d3 {
   background-image: url(./images/d3.jpg);
   background-size: cover;
   display: block;
+  width: 600px;
+  height: 400px;
 }
 
 .img-d4 {
   background-image: url(./images/d4.jpg);
   background-size: cover;
   display: block;
+  width: 600px;
+  height: 400px;
 }
 
-.img-j1 {
-  background-image: url(./images/j1.jpg);
+.img-e01 {
+  background-image: url(./images/e01.png);
   background-size: cover;
   display: block;
+  width: 300px;
+  height: 300px;
 }
 
-.img-j2 {
-  background-image: url(./images/j2.jpg);
+.img-e02 {
+  background-image: url(./images/e02.png);
   background-size: cover;
   display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.img-e3 {
+  background-image: url(./images/e3.png);
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.img-e4 {
+  background-image: url(./images/e4.png);
+  background-size: cover;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.box-rect {
+  width: 200px;
+  height: 300px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
