@@ -442,6 +442,10 @@ $color-A : ('primary-A' : #85fa00,
      @extend .fontSize-default;
 }
 
+.box{
+    @include rect(300px);
+}
+
 
 
 
