@@ -237,15 +237,15 @@ $width : 30;
 
 
 
+//gird
 
-
-@for $i from 1 through 10 {
-    .col-md-#{$i} {
-        width: ($i / 10) * 100%;
-        display: inline-block;
-        background-color: rgb(1, 101, 252);
-    }
-}
+// @for $i from 1 through 10 {
+//     .col-md-#{$i} {
+//         width: ($i / 10) * 100%;
+//         display: inline-block;
+//         background-color: rgb(1, 101, 252);
+//     }
+// }
 
 // BEM 
 .block {
@@ -313,3 +313,40 @@ $font-title : (
     }
 }
 // map 取值
+
+
+.box-4 {
+    width: (4/12) * 100%;
+}
+
+.box-8 {
+    width: (8/12) * 100%;
+}
+
+
+@mixin grid($num , $res:null){
+    @for $i from 1 through $num {
+        .col-#{$res}#{$i} {
+            width: ($i / $num) * 100%;
+            display: inline-block;
+            background-color: rgb(1, 101, 252);
+        }
+    }
+}
+
+@include rwd(desktop) {
+    @include grid(12 , xl-);
+}
+
+@include rwd(medium) {
+    @include grid(12 , md-);
+}
+
+@include rwd(small) {
+    @include grid(12 , sm-);
+}
+
+
+
+
+
