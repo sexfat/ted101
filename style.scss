@@ -90,9 +90,6 @@ body {
 
 // 數值轉字串 #{}
 
-
-
-
 @include push_left('.push', 200, aa) {
     border: 1px solid #00e4a0;
     padding-left: 10px;
@@ -159,33 +156,39 @@ $width : 30;
 .box2 {
     @if ($width < 100) {
         width: $width + px;
-    }@else if  ($width == 110) {
+    }
+
+    @else if ($width==110) {
         width: $width * 2 + px;
-    }@else {
-        width: ($width / 2) + px ;
+    }
+
+    @else {
+        width: ($width / 2) + px;
     }
 }
 
 // layout
-@mixin layout($width){
-  @if $width == 100 {
-     .container-full {
-        width: 100%;
-        display: block;
-        @content;
-     }
-    }@else{
-       .container{
-        width: $width + px;
-        margin: 0 auto; 
-        @content;
-       }
-     }
-  }
+@mixin layout($width) {
+    @if $width==100 {
+        .container-full {
+            width: 100%;
+            display: block;
+            @content;
+        }
+    }
 
-@include layout(1366){
+    @else {
+        .container {
+            width: $width + px;
+            margin: 0 auto;
+            @content;
+        }
+    }
+}
+
+@include layout(1366) {
     h1 {
-       font-size: 20px; 
+        font-size: 20px;
     }
 }
 
@@ -194,20 +197,44 @@ $width : 30;
 
 
 
-
-
-
-
-@include rwd(medium){
-   .box {
-       width: 300px;
-   }
+@include rwd(medium) {
+    .box {
+        width: 300px;
+    }
 }
 
 
-@include rwd(small){
+@include rwd(small) {
     .box {
         width: 100px;
 
     }
 }
+
+
+
+// @for $i from 1 through 100 {
+//     .push-#{$i} {
+//         position: relative;
+//         left: $i * 1px
+//     }
+// }
+
+@mixin push($dir, $num) {
+    @for $i from 1 through $num {
+        .push-#{$dir}_#{$i} {
+            position: relative;
+            #{$dir}: $i * 1px;
+            @content;
+        }
+    }
+}
+
+
+
+
+@include push(top , 100);
+@include push(left , 100){
+   font-size: 100px !important;
+   color: #f20 !important ; 
+};
