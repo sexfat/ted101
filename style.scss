@@ -247,12 +247,42 @@ $width : 30;
     }
 }
 
+// BEM 
 .block {
     font-size: 10px;
+
     &__elem {
         color: #f20;
+
         &--modifty {
             margin: 10px;
         }
     }
 }
+
+
+//each
+
+//$list: a1, a2, a3, b1 , b2; //list
+$list: a1 a2 a3 b1 b2; //list
+
+@each $imgURL in $list {
+    .img-#{$imgURL} {
+        background-image: url(./images/#{$imgURL}.jpg);
+    }
+}
+
+
+@mixin imgUrl($list) {
+    @each $imgURL in $list {
+        .img-#{$imgURL} {
+            background-image: url(./images/#{$imgURL}.jpg);
+            background-size: cover;
+            display: block;
+        }
+    }
+}
+
+
+@include imgUrl(d01  d02  d3 d4  j1  j2);
+

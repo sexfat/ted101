@@ -813,4 +813,60 @@ h5 {
 .block__elem--modifty {
   margin: 10px;
 }
+
+.img-a1 {
+  background-image: url(./images/a1.jpg);
+}
+
+.img-a2 {
+  background-image: url(./images/a2.jpg);
+}
+
+.img-a3 {
+  background-image: url(./images/a3.jpg);
+}
+
+.img-b1 {
+  background-image: url(./images/b1.jpg);
+}
+
+.img-b2 {
+  background-image: url(./images/b2.jpg);
+}
+
+.img-d01 {
+  background-image: url(./images/d01.jpg);
+  background-size: cover;
+  display: block;
+}
+
+.img-d02 {
+  background-image: url(./images/d02.jpg);
+  background-size: cover;
+  display: block;
+}
+
+.img-d3 {
+  background-image: url(./images/d3.jpg);
+  background-size: cover;
+  display: block;
+}
+
+.img-d4 {
+  background-image: url(./images/d4.jpg);
+  background-size: cover;
+  display: block;
+}
+
+.img-j1 {
+  background-image: url(./images/j1.jpg);
+  background-size: cover;
+  display: block;
+}
+
+.img-j2 {
+  background-image: url(./images/j2.jpg);
+  background-size: cover;
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
