@@ -3,7 +3,7 @@
 @import 'sass/var';
 @import 'sass/mixins';
 
-@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+//@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 /*bootstrap end*/
 //layout
 @import 'sass/header';
@@ -99,13 +99,13 @@ body {
 @include push_left('.push', 200, aa) {
     border: 1px solid #00e4a0;
     padding-left: 10px;
-    @include box-sizing();
+   // @include box-sizing();
 }
 
 
 @include push_left('.pull', 100, bb) {
     margin-top: 100px;
-    @include box-sizing();
+   // @include box-sizing();
 }
 
 
@@ -399,7 +399,21 @@ $color-A : ('primary-A' : #85fa00,
     }
 }
 
-@include color($color , color);
+@include color($color , bgc);
 
 
-@include color($color-A , bgcolor);
+@mixin prefix ($key , $val){
+    #{$key}: $val;
+    -webkit-#{$key}: $val;
+    -o-#{$key}: $val;
+}
+
+.box {
+   @include prefix(transition, all 0.3s);
+   @include prefix(user-select , none);
+}
+
+
+
+
+// @include color($color-A , bgcolor);

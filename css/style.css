@@ -115,7 +115,6 @@ body {
   background-image: url(img/aa.jpg);
   border: 1px solid #00e4a0;
   padding-left: 10px;
-  box-sizing: border-box;
 }
 
 .pull-left_100 {
@@ -123,7 +122,6 @@ body {
   left: 100px;
   background-image: url(img/bb.jpg);
   margin-top: 100px;
-  box-sizing: border-box;
 }
 
 .btn-wide {
@@ -1153,58 +1151,39 @@ h5 {
 }
 
 .color-primary {
-  color: #428bca;
+  background-color: #428bca;
 }
 
 .color-success {
-  color: #5cb85c;
+  background-color: #5cb85c;
 }
 
 .color-info {
-  color: #5bc0de;
+  background-color: #5bc0de;
 }
 
 .color-warning {
-  color: #f0ad4e;
-}
-
-.color-danger {
-  color: #d9534f;
-}
-
-.color-stop {
-  color: #333;
-}
-
-.color-status {
-  color: #1eff96;
-}
-
-.color-primary-A {
-  background-color: #85fa00;
-}
-
-.color-success-A {
-  background-color: #2331f8;
-}
-
-.color-info-A {
-  background-color: #f5dc00;
-}
-
-.color-warning-A {
   background-color: #f0ad4e;
 }
 
-.color-danger-A {
-  background-color: #f10800;
+.color-danger {
+  background-color: #d9534f;
 }
 
-.color-stop-A {
-  background-color: #f700ff;
+.color-stop {
+  background-color: #333;
 }
 
-.color-status-A {
+.color-status {
   background-color: #1eff96;
+}
+
+.box {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 /*# sourceMappingURL=style.css.map */
