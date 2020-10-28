@@ -323,27 +323,29 @@ $font-title : (
     width: (8/12) * 100%;
 }
 
-
+//grid 組件
 @mixin grid($num , $res:null){
     @for $i from 1 through $num {
         .col-#{$res}#{$i} {
             width: ($i / $num) * 100%;
             display: inline-block;
-            background-color: rgb(1, 101, 252);
+           
         }
     }
 }
 
+@include grid(16);
+
 @include rwd(desktop) {
-    @include grid(12 , xl-);
+    @include grid(16 , xl-);
 }
 
 @include rwd(medium) {
-    @include grid(12 , md-);
+    @include grid(16 , md-);
 }
 
 @include rwd(small) {
-    @include grid(12 , sm-);
+    @include grid(16 , sm-);
 }
 
 
