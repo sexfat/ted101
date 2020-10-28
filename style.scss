@@ -413,6 +413,42 @@ $color-A : ('primary-A' : #85fa00,
    @include prefix(user-select , none);
 }
 
+@mixin red {
+        color: red    
+}
+
+
+
+
+.red {
+    color: red
+}
+.blue {
+    color: blue;
+}
+
+.fontSize-default {
+   font-size: 16px;
+   font-weight: 400; 
+}
+
+
+.boxRed {
+    @include rect(300px,200px);
+    //@include red();
+    @extend .red  ; 
+    @extend .fontSize-default;
+}
+
+
+.boxBlue {
+     @include rect(300px);
+     @extend .blue;
+     @extend .fontSize-default;
+}
+
+
+
 
 
 

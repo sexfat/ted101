@@ -1186,4 +1186,27 @@ h5 {
   -webkit-user-select: none;
   -o-user-select: none;
 }
+
+.red, .boxRed {
+  color: red;
+}
+
+.blue, .boxBlue {
+  color: blue;
+}
+
+.fontSize-default, .boxRed, .boxBlue {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.boxRed {
+  width: 300px;
+  height: 200px;
+}
+
+.boxBlue {
+  width: 300px;
+  height: 300px;
+}
 /*# sourceMappingURL=style.css.map */
