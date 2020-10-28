@@ -1,17 +1,32 @@
 /*註解*/
 // sass 變數
-@import 'sass/var';
-@import 'sass/mixins';
 
-//@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-/*bootstrap end*/
+//base
+@import 'base/var';
+@import 'base/color';
+@import 'base/reset';
+
+//mixin
+@import 'mixin/mixins';
+
+//modules
+
+@import 'modules/button';
+@import 'modules/form';
+@import 'modules/table';
+
 //layout
-@import 'sass/header';
-@import 'sass/main/desktop';
-@import 'sass/main/medium';
-@import 'sass/main/small';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+
+//page
+@import  'page/index/all';
+@import  'page/aboutus/all';
 
 
+//plugins
+@import  './plugins/allplugin';
 
 body {
     font-family: $font_family;
@@ -130,27 +145,7 @@ $b : 20;
 
 // $fontSize-basic : 12px;
 
-@mixin fontSize($fontSize-basic) {
-    h1 {
-        font-size: ceil($fontSize-basic * 5);
-    }
 
-    h2 {
-        font-size: ceil($fontSize-basic * 4.5);
-    }
-
-    h3 {
-        font-size: ceil($fontSize-basic * 4);
-    }
-
-    h4 {
-        font-size: ceil($fontSize-basic * 3.8);
-    }
-
-    h5 {
-        font-size: ceil($fontSize-basic * 2);
-    }
-}
 
 @include fontSize(20px);
 

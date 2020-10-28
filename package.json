@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.4.1",
     "gsap": "^3.5.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4"
   }
 }

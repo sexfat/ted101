@@ -77,6 +77,29 @@
     }
 }
 
+// 字體
+@mixin fontSize($fontSize-basic) {
+    h1 {
+        font-size: ceil($fontSize-basic * 5);
+    }
+
+    h2 {
+        font-size: ceil($fontSize-basic * 4.5);
+    }
+
+    h3 {
+        font-size: ceil($fontSize-basic * 4);
+    }
+
+    h4 {
+        font-size: ceil($fontSize-basic * 3.8);
+    }
+
+    h5 {
+        font-size: ceil($fontSize-basic * 2);
+    }
+}
+
 
 
 
