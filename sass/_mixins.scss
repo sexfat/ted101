@@ -66,5 +66,17 @@
 }
 
 
+//迴圈 2
+@mixin push($dir, $num) {
+    @for $i from 1 through $num {
+        .push-#{$dir}__#{$i} {
+            position: relative;
+            #{$dir}: $i * 1%;
+            @content;
+        }
+    }
+}
+
+
 
 

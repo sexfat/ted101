@@ -26,6 +26,12 @@ body {
     }
 }
 
+* {
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 //  function name(){
 
@@ -212,29 +218,42 @@ $width : 30;
 }
 
 
-
-// @for $i from 1 through 100 {
-//     .push-#{$i} {
-//         position: relative;
-//         left: $i * 1px
-//     }
-// }
-
-@mixin push($dir, $num) {
-    @for $i from 1 through $num {
-        .push-#{$dir}_#{$i} {
-            position: relative;
-            #{$dir}: $i * 1px;
-            @content;
-        }
+//迴圈
+@for $i from 1 through 100 {
+    .push-#{$i} {
+        position: relative;
+        left: $i * 1px
     }
 }
 
 
 
+@include rwd(small) {
+    @include push(top, 10);
+}
 
-@include push(top , 100);
-@include push(left , 100){
-   font-size: 100px !important;
-   color: #f20 !important; 
-};
+// @include push(right, 100);
+// @include push(left, 100);
+
+
+
+
+
+@for $i from 1 through 10 {
+    .col-md-#{$i} {
+        width: ($i / 10) * 100%;
+        display: inline-block;
+        background-color: rgb(1, 101, 252);
+    }
+}
+
+
+.block {
+    font-size: 10px;
+    &__elem {
+        color: #f20;
+        &--modifty {
+            margin: 10px;
+        }
+    }
+}
