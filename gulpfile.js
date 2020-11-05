@@ -39,11 +39,16 @@ exports.move = function movefile() {
 
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
+const rename = require("gulp-rename");
 
 exports.concatCSS = function concatcss() {
     return src(['css/*.*', '!css/scripts.js'])
         .pipe(concat('all.css'))
         .pipe(cleanCSS())
+        .pipe(rename(function (path) {
+            path.basename += "-min";
+            path.extname = ".css";
+          }))
         .pipe(dest('app/'))
 }
 
@@ -63,15 +68,10 @@ exports.concatCSS = function concatcss() {
 // 壓縮css 
 // https://www.npmjs.com/package/gulp-clean-css
 
-
-var rename = require("gulp-rename");
-
-
 exports.name = function Rename() {
    return src('app/all.css')
    .pipe(rename(function (path) {
-    path.basename += "-aa";
+    path.basename += "aa";
     path.extname = ".css";
   })).pipe(dest('app/'))
-
 }
