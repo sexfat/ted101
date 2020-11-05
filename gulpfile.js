@@ -36,13 +36,25 @@ exports.move = function movefile() {
 
 // 合併檔案任務
 
-var concat = require('gulp-concat');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 
 exports.concatCss = function concatcss() {
-    return src(['css/*.*' , 'css/!*.js']).pipe(concat('all.css')).pipe(dest('app/'))
+    return src(['css/*.*' , '!css/scripts.js'])
+    .pipe(concat('all.css'))
+    .pipe(cleanCSS())
+    .pipe(dest('app/'))
 }
-//排除 用!*.js
+//排除 用!*.js   排除單個檔案
 //多個檔案 ['a1.css' , 'a2.css'] 
+// https://www.itread01.com/content/1546834502.html
+
+
+// 壓縮css 
+// https://www.npmjs.com/package/gulp-clean-css
+
+
+
 
 
 
