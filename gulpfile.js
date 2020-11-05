@@ -34,6 +34,16 @@ exports.move = function movefile() {
     .pipe(dest('app/'))
 }
 
+// 合併檔案任務
+
+var concat = require('gulp-concat');
+
+exports.concatCss = function concatcss() {
+    return src(['css/*.*' , 'css/!*.js']).pipe(concat('all.css')).pipe(dest('app/'))
+}
+//排除 用!*.js
+//多個檔案 ['a1.css' , 'a2.css'] 
+
 
 
 
