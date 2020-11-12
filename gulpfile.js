@@ -109,6 +109,6 @@ function htmlTemplate() {
 //監看檔案 -> 輸出
 
 exports.watch = function watchfile() {
-    watch('./sass/*.scss', styleSass) // 執行function
-    watch(['./*.html' , './**/*.html' ,'!app/*.html'  ], htmlTemplate) // 執行function
+    watch('./sass/*.scss', styleSass); // 執行function
+    watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate) // 執行function
 }
