@@ -9,7 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    @@include('./layout/header.html')
+    @@include('./layout/header.html', {
+        "name" : "login",
+        "link"  : "_active",
+        "title" : "標題"
+    })
     <div class="wrapper"> 
         <div class="content">content</div>
         @@include('./layout/sidebar.html')</div>
