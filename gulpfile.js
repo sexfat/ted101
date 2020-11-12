@@ -75,3 +75,17 @@ exports.name = function Rename() {
     path.extname = ".css";
   })).pipe(dest('app/'))
 }
+
+
+//gulp sass
+const sass = require('gulp-sass');
+
+exports.watchSass = function styleSass() {
+    return src('./sass/*.scss') //input路徑
+    .pipe(sass({
+       outputStyle : "compressed"  //壓縮css 
+    }).on('error', sass.logError))
+    .pipe(dest('./app/css/')) //output路徑
+}
+
+
