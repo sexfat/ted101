@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sexfat/ted101#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",

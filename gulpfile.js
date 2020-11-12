@@ -112,3 +112,18 @@ exports.watch = function watchfile() {
     watch('./sass/*.scss', styleSass); // 執行function
     watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate) // 執行function
 }
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+exports.default = function browser(){
+    browserSync.init({
+        server: {
+            baseDir: "./app",
+            index : 'index.html'
+        },
+        port: 3200
+    });
+    watch('./sass/*.scss', styleSass).on('change' ,reload)
+    watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate).on('change' ,reload)
+}
