@@ -92,8 +92,25 @@ function styleSass() {
         .pipe(dest('./app/css/')) //output路徑
 }
 
-exports.watch = function watchfile() {
-    watch('./sass/*.scss' , styleSass)
+// html 樣版
+const fileinclude = require('gulp-file-include');
+
+
+exports.html = function htmlTemplate() {
+    return src('./*.html') //input
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        })).pipe(dest('./app/')) //output
 }
 
 
+
+
+
+
+//監看檔案 -> 輸出
+
+exports.watch = function watchfile() {
+    watch('./sass/*.scss', styleSass) // 執行function
+}
