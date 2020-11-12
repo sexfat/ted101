@@ -48,7 +48,7 @@ exports.concatCSS = function concatcss() {
         .pipe(rename(function (path) {
             path.basename += "-min";
             path.extname = ".css";
-          }))
+        }))
         .pipe(dest('app/'))
 }
 
@@ -69,23 +69,31 @@ exports.concatCSS = function concatcss() {
 // https://www.npmjs.com/package/gulp-clean-css
 
 exports.name = function Rename() {
-   return src('app/all.css')
-   .pipe(rename(function (path) {
-    path.basename += "aa";
-    path.extname = ".css";
-  })).pipe(dest('app/'))
+    return src('app/all.css')
+        .pipe(rename(function (path) {
+            path.basename += "aa";
+            path.extname = ".css";
+        })).pipe(dest('app/'))
 }
 
 
 //gulp sass
 const sass = require('gulp-sass');
 
-exports.watchSass = function styleSass() {
+function styleSass() {
     return src('./sass/*.scss') //input路徑
-    .pipe(sass({
-       outputStyle : "compressed"  //壓縮css 
-    }).on('error', sass.logError))
-    .pipe(dest('./app/css/')) //output路徑
+        .pipe(sass({
+            outputStyle: "compressed" //壓縮css 
+        }).on('error', sass.logError))
+        // .pipe(rename(function (path) {
+        //     path.basename += "-sass";
+        //     path.extname = ".css";
+        //   })) //改名
+        .pipe(dest('./app/css/')) //output路徑
+}
+
+exports.watch = function watchfile() {
+    watch('./sass/*.scss' , styleSass)
 }
 
 
