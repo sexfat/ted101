@@ -96,7 +96,7 @@ function styleSass() {
 const fileinclude = require('gulp-file-include');
 
 
-exports.html = function htmlTemplate() {
+function htmlTemplate() {
     return src('./*.html') //input
         .pipe(fileinclude({
             prefix: '@@',
@@ -106,11 +106,9 @@ exports.html = function htmlTemplate() {
 
 
 
-
-
-
 //監看檔案 -> 輸出
 
 exports.watch = function watchfile() {
     watch('./sass/*.scss', styleSass) // 執行function
+    watch(['./*.html' , './**/*.html' ,'!app/*.html'  ], htmlTemplate) // 執行function
 }
