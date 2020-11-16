@@ -176,4 +176,15 @@ function img() {
 exports.packageAll = parallel(prefix, img); 
 
 
+const babel = require('gulp-babel');
+
+exports.es5 = function babeles5() {
+    return src('js/*.js')
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(dest('app/js'))
+}
+
+
 
