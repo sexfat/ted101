@@ -150,6 +150,17 @@ exports.packagecss = () => (
 // }
 
 
-//
+//圖片壓縮
+
+const imagemin = require('gulp-imagemin');
+
+
+exports.img = () => (
+    src('images/*')
+        .pipe(imagemin())
+        .pipe(dest('app/images'))
+);
+
+
 
 
