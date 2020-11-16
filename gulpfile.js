@@ -6,6 +6,8 @@ const {
     watch
 } = require('gulp');
 
+const babel = require('gulp-babel');
+
 
 
 // 第一個任務
@@ -172,19 +174,25 @@ function img() {
     .pipe(dest('app/images'))
 }
 
+const uglify = require('gulp-uglify');
 
-exports.packageAll = parallel(prefix, img); 
-
-
-const babel = require('gulp-babel');
-
-exports.es5 = function babeles5() {
+function babeles5() {
     return src('js/*.js')
     .pipe(babel({
         presets: ['@babel/env']
     }))
+    .pipe(uglify())
     .pipe(dest('app/js'))
 }
+//壓縮 js
+
+//打包
+exports.packageAll = parallel(prefix, img , babeles5); 
+
+
+
+
+
 
 
 
