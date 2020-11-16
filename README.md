@@ -18,9 +18,9 @@ webpack 4.43.0
 ```
 # 產生 package.json
 
-`npm init`
+ `npm init`  <br>
 
 
 # 安裝在專案裡
-`npm install webpack@4.43.0 --save-dev`
-`npm install webpack-cli@3.3.12 --save-dev`
+`npm install webpack@4.43.0 --save-dev` <br>
+`npm install webpack-cli@3.3.12 --save-dev` <br>
