@@ -11,7 +11,7 @@
 
 
 ```bash
-webpack-cli 4.1.0
+webpack-cli 3.3.12
 
 webpack 4.43.0
 
