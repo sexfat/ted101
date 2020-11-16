@@ -112,6 +112,7 @@ exports.watch = function watchfile() {
     watch('./sass/*.scss', styleSass); // 執行function
     watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate) // 執行function
 }
+// 瀏覽器同步
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
@@ -122,8 +123,27 @@ exports.default = function browser(){
             baseDir: "./app",
             index : 'index.html'
         },
-        port: 3200
+        //port: 3200
     });
     watch('./sass/*.scss', styleSass).on('change' ,reload)
     watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate).on('change' ,reload)
 }
+
+
+//  prefix
+
+const autoprefixer = require('gulp-autoprefixer');
+
+exports.prefixcss = () => (
+    src('app/style.css')
+        .pipe(autoprefixer())
+        .pipe(dest('app/css/prefix'))
+);
+
+
+// exports.prefixCss = function prefix() {
+    
+// }
+
+
+
