@@ -79,14 +79,16 @@ exports.name = function Rename() {
 
 //gulp sass
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 function styleSass() {
     return src('./sass/*.scss') //input路徑
         .pipe(sass({
             outputStyle: "compressed" //壓縮css 
         }).on('error', sass.logError))
+        //.pipe(autoprefixer())
         // .pipe(rename(function (path) {
-        //     path.basename += "-sass";
+        //     path.basename += "-prefix";
         //     path.extname = ".css";
         //   })) //改名
         .pipe(dest('./app/css/')) //output路徑
@@ -131,18 +133,19 @@ exports.default = function browser(){
 
 
 //  prefix
-
-const autoprefixer = require('gulp-autoprefixer');
-
 exports.prefixcss = () => (
-    src('app/style.css')
+    src('app/css/*.css')
         .pipe(autoprefixer())
+         .pipe(rename(function (path) {
+            path.basename += "_prefix";
+            path.extname = ".css";
+          })) //改名
         .pipe(dest('app/css/prefix'))
 );
 
 
-// exports.prefixCss = function prefix() {
-    
+// function prefix() {
+// return src('').pipe(autoprefixer()).pipe(dest(''))
 // }
 
 

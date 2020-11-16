@@ -7,5 +7,9 @@ body {
       h1 {
           font-size: 30px;
       }
+      .box {
+         animation: cubic-bezier(0.5 , 0.4  , 1.2 , 0.6);
+         border-radius: 1px;
+      }
    } 
 }

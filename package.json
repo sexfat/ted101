@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install_plugin": "npm install",
-    "dev": "gulp"
+    "dev": "gulp",
+    "package-css" : "gulp prefixcss"
   },
   "repository": {
     "type": "git",
