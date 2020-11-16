@@ -114,23 +114,23 @@ function htmlTemplate() {
 
 exports.watch = function watchfile() {
     watch('./sass/*.scss', styleSass); // 執行function
-    watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate) // 執行function
+    watch(['./*.html', './**/*.html', '!app/*.html'], htmlTemplate) // 執行function
 }
 // 瀏覽器同步
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
-exports.default = function browser(){
+exports.default = function browser() {
     browserSync.init({
         server: {
             baseDir: "./app",
-            index : 'index.html'
+            index: 'index.html'
         },
         //port: 3200
     });
-    watch('./sass/*.scss', styleSass).on('change' ,reload)
-    watch(['./*.html' , './**/*.html' , '!app/*.html'  ] , htmlTemplate).on('change' ,reload)
+    watch('./sass/*.scss', styleSass).on('change', reload)
+    watch(['./*.html', './**/*.html', '!app/*.html'], htmlTemplate).on('change', reload)
 }
 
 
@@ -150,13 +150,15 @@ exports.default = function browser(){
 
 function prefix() {
     return src('app/css/*.css')
-    .pipe(autoprefixer())
-     .pipe(rename(function (path) {
-        path.basename += "_prefix";
-        path.extname = ".css";
-      })) //改名
-    .pipe(cleanCSS({compatibility: 'ie8'})) 
-    .pipe(dest('app/css/prefix'))
+        .pipe(autoprefixer())
+        .pipe(rename(function (path) {
+            path.basename += "_prefix";
+            path.extname = ".css";
+        })) //改名
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(dest('app/css/prefix'))
 }
 
 
@@ -169,30 +171,29 @@ const imagemin = require('gulp-imagemin');
 //         .pipe(dest('app/images'))
 // );
 function img() {
-  return src('images/*')
-    .pipe(imagemin())
-    .pipe(dest('app/images'))
+    return src('images/*')
+        .pipe(imagemin())
+        .pipe(dest('app/images'))
 }
 
 const uglify = require('gulp-uglify');
 
 function babeles5() {
     return src('js/*.js')
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(dest('app/js'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
 }
-//壓縮 js
+//清除舊有檔案
+var clean = require('gulp-clean');
+
+function clear() {
+  return src('app' ,{ read: false })
+  .pipe(clean({force: true}));
+}
+
 
 //打包
-exports.packageAll = parallel(prefix, img , babeles5); 
-
-
-
-
-
-
-
-
+exports.packageAll = series(clear,styleSass,parallel(htmlTemplate ,prefix, img, babeles5));
