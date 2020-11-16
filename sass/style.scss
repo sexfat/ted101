@@ -3,7 +3,8 @@ body {
    margin: 0;
    background-color: rgb(250, 171, 2);
    .wapper-index {
-      width: 1500px; 
+      width: 1500px;
+      display: flex;   
       h1 {
           font-size: 30px;
       }

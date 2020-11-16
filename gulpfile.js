@@ -133,13 +133,14 @@ exports.default = function browser(){
 
 
 //  prefix
-exports.prefixcss = () => (
+exports.packagecss = () => (
     src('app/css/*.css')
         .pipe(autoprefixer())
          .pipe(rename(function (path) {
             path.basename += "_prefix";
             path.extname = ".css";
           })) //改名
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(dest('app/css/prefix'))
 );
 
@@ -148,5 +149,7 @@ exports.prefixcss = () => (
 // return src('').pipe(autoprefixer()).pipe(dest(''))
 // }
 
+
+//
 
 
