@@ -132,35 +132,48 @@ exports.default = function browser(){
 }
 
 
-//  prefix
-exports.packagecss = () => (
-    src('app/css/*.css')
-        .pipe(autoprefixer())
-         .pipe(rename(function (path) {
-            path.basename += "_prefix";
-            path.extname = ".css";
-          })) //改名
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(dest('app/css/prefix'))
-);
+//  prefix -> 改名 -> 壓縮css 
+// exports.packagecss = () => (
+//     src('app/css/*.css')
+//         .pipe(autoprefixer())
+//          .pipe(rename(function (path) {
+//             path.basename += "_prefix";
+//             path.extname = ".css";
+//           })) //改名
+//         .pipe(cleanCSS({compatibility: 'ie8'})) 
+//         .pipe(dest('app/css/prefix'))
+// );
 
 
-// function prefix() {
-// return src('').pipe(autoprefixer()).pipe(dest(''))
-// }
+
+function prefix() {
+    return src('app/css/*.css')
+    .pipe(autoprefixer())
+     .pipe(rename(function (path) {
+        path.basename += "_prefix";
+        path.extname = ".css";
+      })) //改名
+    .pipe(cleanCSS({compatibility: 'ie8'})) 
+    .pipe(dest('app/css/prefix'))
+}
 
 
 //圖片壓縮
 
 const imagemin = require('gulp-imagemin');
+// exports.img = () => (
+//     src('images/*')
+//         .pipe(imagemin())
+//         .pipe(dest('app/images'))
+// );
+function img() {
+  return src('images/*')
+    .pipe(imagemin())
+    .pipe(dest('app/images'))
+}
 
 
-exports.img = () => (
-    src('images/*')
-        .pipe(imagemin())
-        .pipe(dest('app/images'))
-);
-
+exports.packageAll = parallel(prefix, img); 
 
 
 
