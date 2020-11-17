@@ -5,15 +5,17 @@ const {
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
+//把路徑載入
+const config = require('../gulp.config')
 
 
 module.exports = function styleSass() {
-    return src('./src/sass/*.scss')
+    return src(config.paths.css)
         .pipe(sass({
             outputStyle: "compressed" //壓縮css  expanded
         }).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(dest('./dist/css/'))
+        .pipe(dest(config.pathsDev.css))
 }
 
 

@@ -9,6 +9,6 @@ const config = require('../gulp.config')
 
 
 module.exports = function clear() {
-  return src(config.path ,{ read: false })
+  return src(config.pathsDev.dist ,{ read: false , allowEmpty: true})
   .pipe(clean({force: true}));
 }
