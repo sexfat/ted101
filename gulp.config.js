@@ -25,6 +25,7 @@ let baseConfig = {
     },
     pathsConfig : {
        index : 'index.html' , // browserSync 首頁位址
+       dist : [savePaths + '/*' , savePaths + '/**/*.*'],
        package  : './package' //打包路徑
     }
 }

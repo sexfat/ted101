@@ -22,7 +22,7 @@ const zipfile = require('./tasks/zip');
 
 
 exports.default =  series(clean ,parallel(server , jsBabel));
-exports.package =  zipfile 
+exports.package =  series(images , concats , parallel(zipfile));
 // exports.default = server ;
 
 

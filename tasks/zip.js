@@ -10,7 +10,7 @@ const Today = new Date();
 
 
 module.exports = function zip(){
-   return src(config.pathsDev.dist +'/*')
+   return src(config.pathsConfig.dist)
     .pipe(zips(Today.getDate()+ '-' + Today.getMinutes() + 'archive.zip'))
     .pipe(dest(config.pathsConfig.package))
 };
