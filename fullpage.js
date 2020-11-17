@@ -14,11 +14,5 @@ new fullpage('#fullpage', {
                 x: 100
             })
         }
-        else if (origin.index == 3) {
-            //section4
-            alert('ok')
-        }
-
-
     }
 });
