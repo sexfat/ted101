@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css.css">
+    <title>fullpage</title>
+    <style>
+        body,
+        h1 {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            color: black;
+        }
+
+        .v1 {
+            background-color: #f20;
+        }
+
+        .v2 {
+            background-color: rgb(0, 254, 93);
+        }
+
+        .v3 {
+            background-color: rgb(0, 30, 199);
+        }
+
+        .v4 {
+            background-color: rgb(249, 249, 0);
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(7, 7, 7);
+            color: #fff;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <section class="section v1">
+            <h1>第一</h1>
+        </section>
+        <section class="section v2">
+            <h1>第二</h1>
+            <div class="box">box</div>
+        </section>
+        <section class="section v3">
+            <h1>第三</h1>
+        </section>
+        <section class="section v4">
+            <h1>第四</h1>
+        </section>
+    </div>
+</body>
+<script src="./fullpage.js"></script>
+
+</html>
