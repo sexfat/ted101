@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     entry: {
        index :'./src/index.js',
-       aboutus :'./src/index.js'
+       aboutus :'./src/aboutus.js'
     },               // 入口文件
     output: {
        path :path.resolve(__dirname , 'dist'),
@@ -41,7 +41,7 @@ module.exports = {
         //html
         new HtmlWebpackPlugin({
            chunks: ['index'],
-           inject: 'head',
+           inject: 'body',
            filename : 'index.html',//產生html
            template : './src/index.html' //來源html
         }),
@@ -51,11 +51,18 @@ module.exports = {
             filename : 'aboutus.html',//產生html
             template : './src/aboutus.html' //來源html
          }),
+         //全域加載jq
          new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
           })
-    ],              // 對應的插件
+    ],
+    resolve: {
+        alias: {
+           vue: 'vue/dist/vue.js'
+        }
+      },
+    // 對應的插件
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
