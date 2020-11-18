@@ -5,7 +5,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-       main :'./src/index.js'
+       index :'./src/index.js',
+       aboutus :'./src/index.js'
     },               // 入口文件
     output: {
        path :path.resolve(__dirname , 'dist'),
@@ -31,15 +32,21 @@ module.exports = {
     },      // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./style.css"
+            filename: "./[name].css"
         }),
         //html
         new HtmlWebpackPlugin({
-           chunk: ['main'],
+           chunks: ['index'],
            inject: 'body',
            filename : 'index.html',//產生html
            template : './src/index.html' //來源html
-        })
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['aboutus'],
+            inject: 'body',
+            filename : 'aboutus.html',//產生html
+            template : './src/aboutus.html' //來源html
+         })
 
     ],              // 對應的插件
     devServer: {
