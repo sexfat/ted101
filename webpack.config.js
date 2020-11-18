@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
@@ -31,13 +32,15 @@ module.exports = {
 
     },      // 處裡對應模組
     plugins: [
+        //清除建構檔案
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "./[name].css"
         }),
         //html
         new HtmlWebpackPlugin({
            chunks: ['index'],
-           inject: 'body',
+           inject: 'head',
            filename : 'index.html',//產生html
            template : './src/index.html' //來源html
         }),
@@ -46,8 +49,11 @@ module.exports = {
             inject: 'body',
             filename : 'aboutus.html',//產生html
             template : './src/aboutus.html' //來源html
-         })
-
+         }),
+         new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],              // 對應的插件
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
