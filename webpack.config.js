@@ -1,9 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    entry: './src/index.js',               // 入口文件
+    entry: {
+       index :'./src/index.js'
+    },               // 入口文件
     output: {
        path :path.resolve(__dirname , 'dist'),
        filename : 'scripts.js'
@@ -29,7 +32,12 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "./style.css"
+        }),
+        //html
+        new HtmlWebpackPlugin({
+           chunk: ['index'] 
         })
+
     ],              // 對應的插件
     //devServer: {},           // 服務器配置
     mode: 'production'      // 開發模式配置 production /development
