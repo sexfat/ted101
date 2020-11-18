@@ -5,11 +5,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-       index :'./src/index.js'
+       main :'./src/index.js',
+       aboutus :'./src/aboutus.js'
     },               // 入口文件
     output: {
        path :path.resolve(__dirname , 'dist'),
-       filename : 'scripts.js'
+       filename : '[name]-bundle.js'
     },              // 出口文件
     module: {
         rules: [{
@@ -31,12 +32,19 @@ module.exports = {
     },      // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./style.css"
+            filename: "./[name].css"
         }),
         //html
         new HtmlWebpackPlugin({
-           chunk: ['index'] 
-        })
+           chunk: ['main'],
+           filename : 'index.html',//產生html
+           template : './src/index.html' //來源html
+        }),
+        new HtmlWebpackPlugin({
+            chunk: ['aboutus'],
+            filename : 'aboutus.html',
+            template : './src/aboutus.html'
+         })
 
     ],              // 對應的插件
     //devServer: {},           // 服務器配置
