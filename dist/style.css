@@ -1,8 +1,2 @@
-body {
-    background-color: rgb(245, 121, 4);
-}
-h1 {
-    color: rgb(134, 252, 207);
-    font-size: 100px;
-    letter-spacing: 50px;
-}
+.wrapper{padding:0}.wrapper h1{font-size:20px}.wrapper .box{width:10px;height:20px}
+

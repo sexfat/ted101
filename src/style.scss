@@ -1,0 +1,13 @@
+@import 'sass/mixin';
+
+.wrapper {
+    padding: 0;
+    h1 {
+        font-size: 20px;
+
+    }
+    .box {
+        @include rect(10px , 20px);
+    }
+
+}
