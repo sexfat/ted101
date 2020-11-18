@@ -67,6 +67,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
+        index : 'index.html',
         port: 9004
       },      // 服務器配置
     mode: 'production'      // 開發模式配置 production /development
