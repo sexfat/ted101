@@ -3,7 +3,7 @@ import { TweenMax } from "gsap";
 import './style.scss'
 
 
-$('body').css('background-color' , "red");
+// $('body').css('background-color' , "blue");
 
 // $('h1').css('color' , "white");
 
