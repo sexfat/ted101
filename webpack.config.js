@@ -57,6 +57,7 @@ module.exports = {
             jQuery: 'jquery'
           })
     ],
+    //解決vue jquery 路徑
     resolve: {
         alias: {
            vue: 'vue/dist/vue.js'
