@@ -11,8 +11,9 @@ import './style.scss'
 // $('h1').css('color' , "white");
 
 TweenMax.to('h1' , 1 , {
-    x: 100,
-    y: 100
+    x: 300,
+    y: 400,
+    rotation : 360
 })
 
 // function square(num) {
