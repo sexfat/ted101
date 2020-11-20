@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install_plugin": "npm install",
-    "dev": "gulp",
-    "打包": "gulp packageAll"
+    "安裝套件": "npm install",
+    "開發": "gulp",
+    "打包": "gulp package",
+    "gulp結構" : "gulp --tasks"
   },
   "repository": {
     "type": "git",
