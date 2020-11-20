@@ -4,7 +4,7 @@ let savePaths = 'dist';
 let baseConfig = {
     //來源檔案
     paths: {
-        html: basePaths + '/*.html' ,
+        html: [ basePaths + '/*.html' , basePaths + '/**/*.html' , '!' + basePaths + '/layout/*.html' ],
         css:  basePaths + '/sass/*.scss',
         js: basePaths + '/js/*.js' ,
         images: basePaths + '/images/*.*'
