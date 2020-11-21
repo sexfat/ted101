@@ -15,6 +15,7 @@ const styleSass = require('./sassStyle');
 const js = require('./jsBabel');
 
 
+
 //  baseDir: config.pathsDev.dist,
 // index: config.pathsConfig.index
 
@@ -29,4 +30,5 @@ module.exports = function browser() {
     watch(config.pathsWatch.scss, series(styleSass)).on('change', reload);
     watch(config.pathsWatch.html, series(htmlTemplate)).on('change', reload);
     watch(config.pathsWatch.js, series(js)).on('change', reload);
+
 }

@@ -7,7 +7,7 @@
     "安裝套件": "npm install",
     "開發": "gulp",
     "打包": "gulp package",
-    "gulp結構" : "gulp --tasks"
+    "gulp結構": "gulp --tasks"
   },
   "repository": {
     "type": "git",
