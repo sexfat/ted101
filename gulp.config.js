@@ -5,6 +5,7 @@ let baseConfig = {
     //來源檔案
     paths: {
         html: [ basePaths + '/*.html' , basePaths + '/**/*.html' , '!' + basePaths + '/layout/*.html' ],
+        php:  basePaths + '/*.php',
         css:  basePaths + '/sass/*.scss',
         js: basePaths + '/js/*.js' ,
         images: basePaths + '/images/*.*'
@@ -13,6 +14,7 @@ let baseConfig = {
     pathsDev : {
         dist : savePaths,
         html:  savePaths  + '/*.html' ,
+        js:   savePaths  + '/*.php' ,
         css:   savePaths + '/css/',
         js:   savePaths  + '/js/' ,
         images:   'dist/images/',
@@ -22,6 +24,7 @@ let baseConfig = {
        html: [basePaths + '/*.html' , basePaths + '/**/*.html' ,  '!' + savePaths + '/*.html'],  //排除
        scss: [basePaths + '/*.scss' , basePaths + '/**/*.scss'], 
        js: [basePaths + '/*.js' , basePaths + '/**/*.js'], 
+       php: [basePaths + '/*.php' , basePaths + '/**/*.php'], 
     },
     pathsConfig : {
        index : 'index.html' , // browserSync 首頁位址
