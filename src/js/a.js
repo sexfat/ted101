@@ -6,3 +6,4 @@ document.getElementById('person').innerHTML = callsomeone('是館長');
 
 
 console.log(callsomeone('小明'))
+

@@ -30,6 +30,6 @@ module.exports = function browser() {
     });
     watch(config.pathsWatch.scss, series(styleSass)).on('change', reload);
     watch(config.pathsWatch.html, series(htmlTemplate)).on('change', reload);
-    watch(config.pathsWatch.js, series(js)).on('change', reload);
+    //watch(config.pathsWatch.js, series(js)).on('change', reload);
     // watch([config.pathsWatch.php], series(php));
 }

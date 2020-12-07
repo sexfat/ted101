@@ -22,7 +22,7 @@ const zipfile = require('./tasks/zip');
 const php = require('./tasks/phpconnect');
 
 
-exports.default =  series(clean ,parallel(server, php , jsBabel));
+exports.default =  series(clean ,parallel(server, php));
 exports.package =  series(images , concats , parallel(zipfile));
 
 // exports.default = server ;
